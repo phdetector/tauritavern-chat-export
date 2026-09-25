@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>聊天导出（单文件）模拟预览</title>
+  <style>
+    :root{color-scheme:light;--bg:#f3f5f9;--panel:#fff;--text:#202735;--muted:#667085;--line:#dfe4ec;--accent:#4f6fd8}
+    *{box-sizing:border-box}body{margin:0;padding:24px 14px 48px;background:var(--bg);color:var(--text);font:15px/1.6 system-ui,-apple-system,"Segoe UI","Microsoft YaHei",sans-serif}.wrap{width:min(980px,100%);margin:0 auto}.panel{padding:18px;border:1px solid var(--line);border-radius:16px;background:var(--panel);box-shadow:0 12px 34px #182a5c12}.toolbar{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:12px}.toolbar h1{margin:0;font-size:clamp(20px,4vw,29px)}.toolbar p{margin:4px 0 0;color:var(--muted);font-size:13px}.links{display:flex;gap:8px;flex-wrap:wrap}.links a{padding:8px 11px;border:1px solid var(--line);border-radius:8px;color:var(--accent);text-decoration:none;font-size:13px}.links a:hover{background:#eef3ff}.preview{height:min(72vh,700px);min-height:460px;margin-top:16px;border:1px solid var(--line);border-radius:12px;background:#fff}.preview iframe{width:100%;height:100%;border:0;border-radius:12px}.note{margin:14px 0 0;color:var(--muted);font-size:12px}
+  </style>
+</head>
+<body>
+  <main class="wrap">
+    <section class="panel">
+      <div class="toolbar">
+        <div>
+          <h1>聊天导出（单文件）模拟预览</h1>
+          <p>仅使用合成内容，用于查看脱离酒馆后的 HTML 文件效果。</p>
+        </div>
+        <nav class="links" aria-label="预览文件">
+          <a href="demo.html" target="_blank" rel="noopener">打开 HTML 文件</a>
+          <a href="demo.txt" target="_blank" rel="noopener">查看 TXT 文件</a>
+        </nav>
+      </div>
+      <div class="preview"><iframe src="demo.html" title="模拟 HTML 导出预览"></iframe></div>
+      <p class="note">示例包含多 swipe、Markdown、代码块和内嵌图片；没有真实聊天记录、token 或应用配置。</p>
+    </section>
+  </main>
+</body>
+</html>
