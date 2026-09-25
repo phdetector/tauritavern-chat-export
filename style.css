@@ -1,0 +1,245 @@
+#tt-chat-export-launcher,
+#tt-chat-export-menu,
+#tt-chat-export-modal {
+  --ttce-accent: #4f6fd8;
+  --ttce-accent-strong: #3859c5;
+  --ttce-bg: #ffffff;
+  --ttce-surface: #f7f8fb;
+  --ttce-line: #dfe4ec;
+  --ttce-text: #202735;
+  --ttce-muted: #667085;
+  font-family: system-ui, -apple-system, "Segoe UI", "Microsoft YaHei", sans-serif;
+}
+
+#tt-chat-export-launcher {
+  position: fixed;
+  z-index: 2147483000;
+  left: 18px;
+  bottom: 18px;
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  min-height: 42px;
+  padding: 0 14px;
+  border: 1px solid color-mix(in srgb, var(--ttce-accent) 70%, #fff);
+  border-radius: 999px;
+  background: var(--ttce-accent);
+  color: #fff;
+  box-shadow: 0 8px 24px #182a5c38;
+  cursor: pointer;
+  font: 600 13px/1 system-ui, -apple-system, "Segoe UI", sans-serif;
+  transition: transform .16s ease, background .16s ease, box-shadow .16s ease;
+}
+
+#tt-chat-export-launcher:hover,
+#tt-chat-export-launcher:focus-visible {
+  background: var(--ttce-accent-strong);
+  box-shadow: 0 10px 30px #182a5c4a;
+  transform: translateY(-1px);
+}
+
+#tt-chat-export-launcher:focus-visible,
+#tt-chat-export-menu button:focus-visible,
+#tt-chat-export-modal button:focus-visible {
+  outline: 3px solid #8da6ff;
+  outline-offset: 2px;
+}
+
+#tt-chat-export-menu {
+  position: fixed;
+  z-index: 2147483001;
+  left: 18px;
+  bottom: 68px;
+  width: 220px;
+  padding: 7px;
+  border: 1px solid var(--ttce-line);
+  border-radius: 13px;
+  background: var(--ttce-bg);
+  box-shadow: 0 18px 44px #182a5c2b;
+}
+
+#tt-chat-export-menu[hidden],
+#tt-chat-export-modal[hidden] {
+  display: none !important;
+}
+
+#tt-chat-export-menu button {
+  display: block;
+  width: 100%;
+  padding: 10px 11px;
+  border: 0;
+  border-radius: 9px;
+  background: transparent;
+  color: var(--ttce-text);
+  cursor: pointer;
+  text-align: left;
+  font: 500 13px/1.35 system-ui, -apple-system, "Segoe UI", sans-serif;
+}
+
+#tt-chat-export-menu button:hover {
+  background: var(--ttce-surface);
+}
+
+.tt-chat-export-menu-title {
+  padding: 6px 11px 7px;
+  color: var(--ttce-muted);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: .04em;
+}
+
+#tt-chat-export-modal {
+  position: fixed;
+  z-index: 2147483002;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  padding: 18px;
+  background: #11182780;
+}
+
+.tt-chat-export-dialog {
+  display: flex;
+  width: min(960px, 100%);
+  max-height: min(780px, calc(100vh - 36px));
+  flex-direction: column;
+  overflow: hidden;
+  border: 1px solid var(--ttce-line);
+  border-radius: 16px;
+  background: var(--ttce-bg);
+  color: var(--ttce-text);
+  box-shadow: 0 28px 80px #11182740;
+}
+
+.tt-chat-export-dialog-header,
+.tt-chat-export-dialog-actions {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 14px 16px;
+  border-bottom: 1px solid var(--ttce-line);
+}
+
+.tt-chat-export-dialog-header h2 {
+  margin: 0;
+  font-size: 17px;
+}
+
+.tt-chat-export-dialog-header p {
+  margin: 3px 0 0;
+  color: var(--ttce-muted);
+  font-size: 12px;
+}
+
+.tt-chat-export-icon-button,
+.tt-chat-export-secondary-button,
+.tt-chat-export-primary-button {
+  min-height: 34px;
+  padding: 7px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  font: 600 12px/1.25 system-ui, -apple-system, "Segoe UI", sans-serif;
+}
+
+.tt-chat-export-icon-button,
+.tt-chat-export-secondary-button {
+  border: 1px solid var(--ttce-line);
+  background: var(--ttce-bg);
+  color: var(--ttce-text);
+}
+
+.tt-chat-export-primary-button {
+  border: 1px solid var(--ttce-accent);
+  background: var(--ttce-accent);
+  color: #fff;
+}
+
+.tt-chat-export-primary-button:hover {
+  background: var(--ttce-accent-strong);
+}
+
+.tt-chat-export-tabs {
+  display: flex;
+  gap: 6px;
+  padding: 10px 14px 0;
+  background: var(--ttce-surface);
+}
+
+.tt-chat-export-tabs button {
+  padding: 7px 12px;
+  border: 1px solid transparent;
+  border-bottom: 0;
+  border-radius: 8px 8px 0 0;
+  background: transparent;
+  color: var(--ttce-muted);
+  cursor: pointer;
+  font: 600 12px/1.2 system-ui, -apple-system, "Segoe UI", sans-serif;
+}
+
+.tt-chat-export-tabs button.is-active {
+  border-color: var(--ttce-line);
+  background: var(--ttce-bg);
+  color: var(--ttce-text);
+}
+
+.tt-chat-export-preview {
+  min-height: 260px;
+  flex: 1 1 auto;
+  overflow: auto;
+  background: var(--ttce-surface);
+}
+
+.tt-chat-export-preview pre {
+  min-height: 260px;
+  margin: 0;
+  padding: 18px;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+  color: var(--ttce-text);
+  font: 13px/1.65 ui-monospace, SFMono-Regular, Consolas, monospace;
+}
+
+.tt-chat-export-preview iframe {
+  display: block;
+  width: 100%;
+  min-height: 500px;
+  height: min(62vh, 620px);
+  border: 0;
+  background: #fff;
+}
+
+.tt-chat-export-dialog-actions {
+  justify-content: flex-end;
+  border-top: 1px solid var(--ttce-line);
+  border-bottom: 0;
+  background: var(--ttce-bg);
+}
+
+@media (max-width: 600px) {
+  #tt-chat-export-launcher {
+    left: 10px;
+    bottom: 10px;
+    min-height: 40px;
+    padding: 0 12px;
+  }
+
+  #tt-chat-export-menu {
+    left: 10px;
+    bottom: 58px;
+  }
+
+  #tt-chat-export-modal {
+    padding: 8px;
+  }
+
+  .tt-chat-export-dialog {
+    max-height: calc(100vh - 16px);
+    border-radius: 12px;
+  }
+
+  .tt-chat-export-preview iframe {
+    min-height: 420px;
+    height: 60vh;
+  }
+}

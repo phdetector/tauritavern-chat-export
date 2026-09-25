@@ -1,0 +1,13 @@
+{
+  "display_name": "聊天导出（单文件）",
+  "loading_order": 10,
+  "requires": [],
+  "optional": [],
+  "dependencies": [],
+  "js": "index.js",
+  "css": "style.css",
+  "author": "phdetector",
+  "version": "0.1.0",
+  "homePage": "https://github.com/phdetector/tauritavern-chat-export",
+  "auto_update": true
+}
