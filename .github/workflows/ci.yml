@@ -1,0 +1,32 @@
+name: CI
+
+on:
+  push:
+    branches: [main, "feat/**"]
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    name: Test and validate plugin structure
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [20, 22, 24]
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ matrix.node-version }}
+      - name: Run unit tests and structure checks
+        run: npm test
+      - name: Run JavaScript syntax checks
+        run: npm run check
+      - name: Verify release entry points
+        shell: bash
+        run: test -f manifest.json && test -f index.js && test -f export-core.mjs && test -f style.css
+'''
